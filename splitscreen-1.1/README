@@ -1,0 +1,44 @@
+Splitscreen (version 1.0)
+(C) Francois Dechelle 2010
+
+A simple library for terminal output, that allows to display
+output and read input in separated areas, using curses library.
+
+
+Prerequisites
+=============
+
+The curses library must be installed, both runtime and development
+files. This can be done on Ubuntu 12.04 with:
+$ sudo apt-get install libncurses5-dev
+
+
+Compilation
+===========
+
+To compile, just run 'make'
+
+
+Tests and examples
+==================
+
+There are 2 tests provided with the sources, that are also 
+programming examples:
+- test1: simple input/output
+- test2: input/output using select()
+
+
+Functions
+=========
+
+See documentation in splitscreen.h
+
+void splitscreen_init( int nlines, const char *prompt)
+void splitscreen_prompt(void)
+int splitscreen_input_char( void)
+int splitscreen_input_line( char *buf, int size)
+void splitscreen_output( const char *buf)
+void splitscreen_quit( void)
+
+
+
